@@ -36,7 +36,27 @@ RUNTIME_FILES = [
 # AutoTranslator 的空占位文件（可有可无，有就带上）
 PLACEHOLDERS = ["_Preprocessors.txt", "_Postprocessors.txt", "_Substitutions.txt"]
 
-ZIP_NAME = "ZenTrails-中文汉化-v1.1.zip"
+def _version():
+    """从 pyproject.toml 读 [project].version（单源版本管理）。"""
+    import re
+    p = os.path.join(paths.ROOT, "pyproject.toml")
+    try:
+        import tomllib
+        with open(p, "rb") as f:
+            return tomllib.load(f)["project"]["version"]
+    except Exception:
+        txt = open(p, encoding="utf-8").read()
+        m = re.search(r'version\s*=\s*"([^"]+)"', txt)
+        if not m:
+            raise SystemExit("读不到 version：%s" % p)
+        return m.group(1)
+
+
+def zip_name(version=None):
+    return "ZenTrails-CN-v%s.zip" % (version or _version())
+
+
+ZIP_NAME = zip_name()
 
 # 控制台/管道按 UTF-8 输出，避免中文在 GBK 终端里变乱码
 try:

@@ -1,6 +1,6 @@
 [project]
 name = "zen-trails-cn"
-version = "0.1.0"
+version = "0.1.1"
 description = "Zen Trails 简体中文汉化：词典生成与界面验证工具"
 readme = "README.md"
 requires-python = ">=3.11"
