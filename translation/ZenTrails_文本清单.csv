@@ -1,0 +1,576 @@
+﻿#,来源,英文原文,中文译文,对象/字段
+1,代码,"The Modify panel is immensely useful. It can be accessed by pressing the 'Modify' button on the left. You can create complex masterpieces with just a few strategic button presses. If you have any segments selected, anything you do in the Modify panel will only affect those. Otherwise, all segments will be affected where applicable.
+Let's start with the windmillize button, in case you missed it from before. Without selecting anything, open the Modify and click the Windmillize button after setting the value to 12.
+It's handy not only for creating windmills, but multiplying self contained designs. If nothing is selected, only the root segments will be windmillized.",,
+2,代码,"Another fun technique is to make a cool shape and copy paste it a bajillion times while making the whole design smaller as you go.
+Here's how you do it:
+1. Select the root segment and press 'C' to copy it, then press 'Escape' to cancel the copy.
+2. Click the 'Modify' button in the panel on the left.
+3. Set the 'Length' modifier value to something less than 1, like 0.5, and press the Length multiply button (the X).
+4. Everything got smaller. Now press 'V' to duplicate your previous copy. (It remembers your copy even though you cancelled.)
+5. Plop it on the center point, then repeat steps 2 through 5 as many times as you want.",,
+3,代码,"Like this one that turns into a multi-layered flower if you let it run to completion.
+In this example we used the previous recursion technique, and then simply pressed the 'Sort Layers' button in the Modify Panel. That will sort all segments layers from first to last (or vice versa depending on the button), so you don't have to tediously set them all yourself. As long as you create your segments in the order you want them shown it'll be perfect.
+Most designs don't care about layer order as long as they're not the same so that button is handy.",,
+4,代码,"What if we don't want the spiral to finish at the center point? We'll just make the fourth segment here faster than the second one. Previously they were the same speed so everything collapses into the center point, but now the design will 'smooth out' before it gets there, so I added a big thick circle to celebrate the occasion.
+(Also the circle helps hide the end of the line when it pauses. If you're curious to see what the design would look like if it doesn't pause, simply un-pause it after it stops and it'll keep going.)",,
+5,代码,"These sine wave thingies are essential for creating Lissajous curves. You might not be familiar with that name, but basically they're about curves that represent harmonic motion. Don't stress about the fancy terms. We just care about making pretty lines here.
+If we connect two of these 2-segment sine wave contraptions together, one for the horizontal and one for the vertical, we can create any kind of Lissajous curve. In this example is the most basic one.",,
+6,代码,"That's it! If you've made it this far I sincerely hope you're feeling inspired to create and share some spirographic masterpieces of your own.
+If you're playing on Steam, feel free to take screenshots and post them on the community hub. I love seeing what people come up with!
+You can keep perusing the tutorial using the 'Tutorial' button in the bottom left, or exit by pressing 'Escape'.
+Thank you so much for playing Zen Trails. I hope you love it!",,
+7,代码,"Making elaborate, complex designs doesn't have to be difficult. The key is to start simple and just keep adding and experimenting. This is a no-pressure, zero stress situation. We just mess around until we get something we like.
+Here we'll start with a simple sine wave design that's been 'spiralized' so it continously shrinks.It rotates fast but shrinks slowly. This will let us create a dense design that slowly evolves.
+You'll see what I mean.",,
+8,代码,"So just to clarify, because this will be important later, the second segment of the spiral determines how long it takes for the spiral to complete, and the first one determines the density of the spiral.
+Notice how in this design, the spirals all complete their design in exactly the same amount of time it takes main root segment to do one rotation. That's because the main root segment has the same speed as the spirals' second segments.",,
+9,代码,"Then we'll change the root segments from speed 1 to speed 1.01. This way they will slowly drift counter-clockwise creating a full circular pattern.
+We'll also make it blue because we're imitating water here and we take this stuff seriously.
+Give it a minute. It'll stop on its own when the pattern is complete, and we'll get to see a beautiful water-esque ripple.
+I've doubled the global speed here so it happens faster.",,
+10,代码,"Keep in mind that if you have a shape, like a triangle in these examples, and you want to add a ribbon, the speed of the first extending segment probably shouldn't be 0.
+By setting it to the opposite of the segment it's attached to (ie, 3 vs -3), it will 'cancel out' the rotation, so to speak, and just go around the perimeter.
+That's what's happening in the top example. The bottom one is what happens if set to 0.",,
+11,代码,"There's really no limit to how elaborate and complex your design may be. Here's one that makes a funky, twisting tube that shrinks and expands.
+This was made in the exact same way as the last one: We just started with a simple design and kept adding more and more slow moving segments of varying lengths and speeds. It mostly works because of the spiraling of the circle made by the quick-moving segments at the end.",,
+12,代码,"Now we'll take this design and divide each segment into two segments of equal length.
+In each case, the first segment still has the original speed, and the second has a very slow speed to make it spiral.
+So basically what we did was take a simple design and turn every segment in it into individual spirals, and set the speed of all of the spirals the same, so that they all finish right at the center point.",,
+13,代码,"Let's start simple; just two segments.  The first one has a speed of -1, the second has a speed of 3. This means that for every 1 rotation of the first segment, the second one will rotate 3 times.
+This will give the design 3 'peaks', which depending on the length might mean a flower with 3 petals or maybe just a triangle.
+Try changing the speed of the second segment and see how it changes the shape.",,
+14,代码,"Since we need it to be more dense, we have to choose to have it shrink slower, or just 'windmillize' it so it fills in the empty space.
+Let's windmillize it. In the same amount of time we get four times the density. It's starting to look pretty cool. In fact you could call that done, since there's really no criteria for what is or isn't finished. But we'll make one more change.",,
+15,代码,"If you did everything right you should have lots of copies of your original shape that look like they're shrinking into the middle of the screen.
+In this example we offest every other copy to add some variety but that's optional. We also reduced the Trail Width every time we reduced the length so the thickness of the line stays proportional to the shape size.",,
+16,代码,"Give it a try. We have a very simple design here. Click on the root segment and change its speed from 1 to .98.
+Now it will take 50 rotations to complete its design, whereas before it took only 1. This is the basic concept for creating 'spirographs'. The closer to 1 you make the root segment speed, without it being 1, the more dense the design will be.",,
+17,代码,"The result of this looks similar to the previous spiraling technique but they are not the same. See how the one on the left works inward at a very even, constant rate while the other one doesn't?
+That's because the sine wave one is staying perfectly in line with its root segment, while the other one is moving to the side as it rotates.",,
+18,代码,"Let's combine some concepts. Remember that sine wave concept? We'll make one of those, and then add this spiral thing to the end of it.
+Notice that the spiral syncs perfectly with the sine wave. This is because the second segment on each is set to speed 0.4 (or -0.4), so they all take the same amount of time to do a full rotation.",,
+19,代码,"You may have noticed a little option in each segment's info panel, in the MORE tab, at the bottom called 'Layer Order'. (Click on a segment to open its info panel, then open the MORE tab).
+This determines which line will be on top if they cross over each other, and it's useful for creating layered designs. Obviously.",,
+20,代码,"What we're really doing is making a sine wave, as you can see here when we speed it up and stick on the end of another segment.
+It may seem boring right now, but future you is gonna look back at this, having had their mind blown by what's to come, and marvel at the simplicity of this glorious mathematical treasure.",,
+21,代码,"Remember just a few slides ago we were making a recursive looking design in the most difficult, tedious way possible?
+Well, there's a button for that. In the Modify panel, click the 'Make Recursive...' button. This will multiply all root segments, or all selected segments, while making each recursion smaller.",,
+22,代码,"Now we've taken the entire design and just stuck it on the end of one very very slow-moving segment. The result is a weird looking complex sort of cloud that takes a very long time to complete.
+I've doubled the global speed and added smoothing so we don't have to sit here forever waiting for it to finish.",,
+23,代码,"Possibly the most important concept in making complex spirographic masterpieces is this simple straight line.
+This is done with two segments of equal length, with a speed ratio of 1:-2.
+So here we have two segments, same length, the first one set to speed 1, and the second set to speed -2. Easy!",,
+24,代码,"So what if we want a design to spiral inward but not distort? The previous examples twisted around as they got smaller, which looks cool but we might not want that sometimes.
+It's tricky but you've made it this far so I have confidence in you. We'll start very simple.
+This is a circle.",,
+25,代码,"One handy technique you might like is to alternate between negative and positive speeds. It just tends to lend itself to aesthetic designs, though that's not guaranteed.
+Here we have segments with speeds of 1, -3, and 3. Positive, negative, positive.
+I call these designs 'accordions'.",,
+26,代码,"Here's a fun one. Click the 'Apply Colors Sequentially' button in the Modify panel. When you hit apply, all the existing segments will be given a new color along a gradient between the colors you've selected.
+You can add and remove colors to make the gradient more complex or simple.",,
+27,代码,"So far, the root segment in all of these designs has been the slowest one. If we make the root faster than its extending segment, we get a spiral effect as the second segment slowly creeps towards the center.
+It's like the opposite of a spirograph. 
+A 'spiral-graph', if you will.",,
+28,代码,"Making windmills is so effective and handy that I actually made a button just for this very purpose.
+Select the second segment, then click on the 'Modify' button in the panel to the left, then click 'Windmillize'.
+The higher the number, the more arms it will make, spaced evenly.",,
+29,代码,"The Spiralize button is great for taking a simple design like this diamond and doing exactly what we were doing earlier: making it spiral inward.
+Give it a try! Just press the Spiralize button and bam, suddenly your boring design is turning into a masterpiece.",,
+30,代码,"Is it possible to take this idea too far?
+Okay so it's a little ugly, but the point is that Zen Trails is all about judgement-free pursuit of curiosity. Beautiful designs and fun discoveries happen just by trying stuff out and seeing if it works!",,
+31,代码,"It's important to know that windmills are not necessary for creating complex, full designs. A single line can also create the same effect. 
+These two examples, if you let them run long enough, will eventually look almost exactly the same.",,
+32,代码,"Now we took the second segment and divided <i>that one</i> into two equal segments.
+Remember that sine wave concept from before? All we did here was take our basic single segment, and make the second half of it a very slow sine wave.",,
+33,代码,"Changing the direction of a segment by making its speed negative instead of positive(or vice versa) affects the design dramatically. These two examples are exactly the same, except one of them has a speed of 4 and the other is -4.",,
+34,代码,"That's cool and all, but it's kind of slow and sparse. So we'll duplicate each one several times and spread them out equally. Not only does this make the design more dense, but it's super fun to watch all the arms move around.",,
+35,代码,"Now we're starting to delve into some complexity, but stay with me because it's really quite simple if we break it down.
+So here is a very simple design, just two segments of speeds 1 and 5. It makes a nice puffy cloud.",,
+36,代码,"And this is what it looks like if we make it <i>shrink</i>, by making the second half of each segment a sine wave.
+So we started with two segments, and divided each of them into three segments so now we have six.",,
+37,代码,"We change the background, add some glow, and BAM. That's a finished work of art right there.
+You could hang that on the fridge and breathe in a deep sense of pride and accomplishment every time you grab a snack.",,
+38,代码,"There is no limit to how many segments can extend from a single segment, and having multiple ones that all have the same speed is a handy way to quickly make a pretty design.
+I call these 'windmills'.",,
+39,代码,"Why stop there? Let's make lots of these tubes, at different angles, different lengths, and give it some color.
+They all sync up because, once again, the second segments are all set to the same speed.",,
+40,代码,Complex designs don't have to be mathematically difficult. Everything you see here was made with very simple basic shapes and windmills. The trick is to just keep adding things until it looks awesome.,,
+41,代码,Check this out. Same thing as before but bigger and slower and it makes a perfect flower. You can change how many petals the flower has by changing the speed of the root segment.,,
+42,代码,We can manipulate this concept to make some strange looking stuff. All we did here was make the spirals complete four times faster than one rotation of the main root segment.,,
+43,代码,Say we want to create a design that mimics how ripples move through water. We'll start by increasing the speed on the 3rd and 4th segments to gives us lots of ups and downs.,,
+44,代码,"The interesting thing about a Lissajous curve is that it all takes place in a box-shaped area. if you let this design run for a bit, you'll see it create a perfect square.",,
+45,代码,"Back to basics. Some simple windmills are all it takes. With just some little variations here and there of speeds and widths, we can easily create an interesting design.",,
+46,代码,"With the right application it can be pretty cool. Of course, as we've seen, adding glow and colors and making the background dark tends to make everything look good.",,
+47,代码,"We've only just begun but already you can see that the possibilities are endless even with just two simple segments, with little changes to their speed and lengths.",,
+48,代码,"Then we'll take it and stick it on the end of a 2-segment oval shape.
+Looks pretty bad, right? That's because our original 4-segment thing is shrinking too fast.",,
+49,代码,"A very easy technique is to have lots of extending segments all set to speed 0. It's a quick and effective way to accent any design.
+I call these 'Ribbons'",,
+50,代码,"How about a shrinking windmill with little shrinking windmills attached to it?
+We're just combining several simple concepts to make something unique.",,
+51,代码,Little changes make a big difference. Look at how dramatically different these four designs are despite their segments being almost identical.,,
+52,代码,"Our ultimate goal is to make a pretty design, so let's expand and add some more layers, just by duplicating this and making it bigger.",,
+53,代码,"By adding some little attachments with speed 0, and changing the trail width of a couple segments, the design starts to come alive.",,
+54,代码,"Likewise, changing the length has just as much of an impact. Here we have two identical examples except their lengths are swapped.",,
+55,代码,"To finish this up, we'll add some colors and glow, and change the background. It will pause automatically when it's complete.",,
+56,代码,"If we were using our previous technique of dividing each segment into two, so that it spirals, it would look like this.",,
+57,代码,"Here we have the results of the Shrinkify and Spiralize buttons respectively, with the un-altered design in the middle.",,
+58,代码,"We can continue this pattern for as far as we want and it still looks pretty good.
+Do you see the accordion now?",,
+59,代码,"Look at how much cooler this design is with the ribbons, instead of just having one boring line, amirite?",,
+60,代码,We'll take that whole thing and copy it seven more times just to make the design complete faster.,,
+61,代码,We apply the shrinking effect by making the second half of each segment become a sine wave.,,
+62,代码,"Add some colors, change the background, you know the drill. Now it's a super neato design!",,
+63,代码,FCP in world space render mode requires an event camera to be set up on the parent canvas!,,
+64,代码,Using ribbons is a fun and easy way to add some density and get some cool geometry going.,,
+65,代码,But messing with the layers intentionally can create some interesting stuff if done well.,,
+66,代码,It'll be easier to grasp this with an example of a different shape. Here we have a star.,,
+67,代码,This method of creating recursive-looking designs works extremely well with windmills.,,
+68,代码,"We just divided it into two equal segments, just like before. It will spiral inward.",,
+69,代码,The Shrinkify button is very similar but without the spiraling. Give that one a try.,,
+70,代码,"All of the subsequent ribbons can just be speed 0, and they'll always stay in line.",,
+71,代码,Two windmills rotating opposite each other creates a sort of closed loop illusion.,,
+72,代码,"As long as we're combining concepts, let's windmill-ize it. That's always fun.",,
+73,代码,By modifying the angles just a little the same segments create a figure 8.,,
+74,代码,We go insane and copy and paste it a bajillion times and speed it up...,,
+75,代码,Hear me out. What if the windmills have little windmills of their own?,,
+76,代码,And why stop there? Let's add some more and give them some variety.,,
+77,代码,STEAMWORKS NOT CONNECTED! Connect to Steam and restart Zen Trails.,,
+78,代码,FAILED TO CONNECT TO STEAM WORKSHOP... Are you connected to Steam?,,
+79,代码,NewSegDefaults/NewSegDefaultsPanel/TrailWidth/InputField (TMP),,
+80,代码,NOTHING TO UPLOAD. Please create or load a saved design first.,,
+81,代码,Let's do a better example. This is a triangle. Very simple.,,
+82,代码,NewSegDefaults/NewSegDefaultsPanel/Speed/InputField (TMP),,
+83,代码,YOU CAN ONLY UPLOAD ONCE PER 30 SECONDS. TIME REMAINING =,,
+84,代码,NewSegDefaults/NewSegDefaultsPanel/Glow/InputField (TMP),,
+85,代码,DESIGN DOWNLOADED BUT COULD NOT LOAD. POSSIBLY CORRUPT.,,
+86,代码,AestheticsPanel/LimitRotationsOption/InputField (TMP),,
+87,代码,. Did you assign all the picker images in the editor?,,
+88,代码,ModifySelectedPanel/ModifyLength/InputField (TMP),,
+89,代码,ModifySelectedPanel/ModifySpeed/InputField (TMP),,
+90,代码,ModifySelectedPanel/ModifyWidth/InputField (TMP),,
+91,代码,ModifySelectedPanel/ModifyAngle/InputField (TMP),,
+92,代码,ModifySelectedPanel/ModifyGlow/InputField (TMP),,
+93,代码,That was the last page... There's nothing else.,,
+94,代码,AestheticsPanel/LineThickness/InputField (TMP),,
+95,代码,UPLOAD FAILED! ... Are you connected to Steam?,,
+96,代码,NO ENTRIES FOUND. Are you connected to Steam?,,
+97,代码,DOWNLOAD COMPLETE. ATTEMPTING TO LOAD FILE...,,
+98,代码,is not associated with a single color value.,,
+99,代码,DOWNLOAD FAILED. Are you connected to Steam?,,
+100,代码,AestheticsPanel/LayerOrder/InputField (TMP),,
+101,代码,Modify selected segments pause option value,,
+102,代码,TOOK TOO LONG. TIMED OUT. PLEASE TRY AGAIN.,,
+103,代码,Toggle selected segments draw trail option,,
+104,代码,YOU HAVE TO GIVE YOUR DESIGN A TITLE FIRST,,
+105,代码,ModifyPanel/ModifyLength/InputField (TMP),,
+106,代码,ModifyPanel/ModifySpeed/InputField (TMP),,
+107,代码,ModifyPanel/ModifyWidth/InputField (TMP),,
+108,代码,ModifyPanel/ModifyGlow/InputField (TMP),,
+109,代码,Hidden/Mirza Beig/Image Effects/Sharpen,,
+110,代码,WAITING FOR FILE TO APPEAR IN SYSTEM...,,
+111,代码,AestheticsPanel/Glow/InputField (TMP),,
+112,代码,LimitRotationsOption/InputField (TMP),,
+113,代码,Toggle selected segments pause option,,
+114,代码,Modify selected segments trail width,,
+115,代码,Modify selected segments layer order,,
+116,代码,Modify segment pause option value,,
+117,代码,Modify selected segments gradient,,
+118,代码,No picker image available of type,,
+119,代码,/screenshots/ZenTrails Screenshot,,
+120,代码,Toggle segment draw trail option,,
+121,代码,DOWNLOADING ZEN TRAILS DESIGN...,,
+122,代码,SET ALL SELECTED TO SAME VALUE:,,
+123,代码,SET ALL SEGMENTS TO SAME VALUE:,,
+124,代码,Reverse selected segments speed,,
+125,代码,Modify selected segments length,,
+126,代码,Switch segment to single color,,
+127,代码,Modify selected segments angle,,
+128,代码,LineThickness/InputField (TMP),,
+129,代码,Modify selected segments color,,
+130,代码,Modify selected segments speed,,
+131,代码,Randomize colors from palette,,
+132,代码,ScrollView/Scrollbar Vertical,,
+133,代码,Modify selected segments glow,,
+134,代码,Windmillize All Root Segments,,
+135,代码,GlobalSpeed/InputField (TMP),,
+136,代码,LengthText/InputField (TMP),,
+137,代码,Toggle segment pause option,,
+138,代码,Failed to load KeyBind file,,
+139,代码,LayerOrder/InputField (TMP),,
+140,代码,DOWNLOAD CANCELLED BY USER,,
+141,代码,Switch segment to gradient,,
+142,代码,SpeedText/InputField (TMP),,
+143,代码,AngleText/InputField (TMP),,
+144,代码,Modify segment trail width,,
+145,代码,Modify segment layer order,,
+146,代码,Change colors sequentially,,
+147,代码,Unkown main picking mode:,,
+148,代码,ATTEMPTING TO DOWNLOAD...,,
+149,代码,Delete selected segments,,
+150,代码,MODIFY SELECTED SEGMENT:,,
+151,代码,Modify selected segments,,
+152,代码,SAVING CURRENT DESIGN...,,
+153,代码,SEARCHING FOR RESULTS...,,
+154,代码,UPLOAD SUCCESSFUL! YAY!!,,
+155,代码,Modify segment gradient,,
+156,代码,EndPoint/Segment(Clone),,
+157,代码,Modify all trail width,,
+158,代码,ENTRIES FOUND ON PAGE,,
+159,代码,Reverse segment speed,,
+160,代码,Modify segment length,,
+161,代码,Glow/InputField (TMP),,
+162,代码,Modify segment color,,
+163,代码,Modify segment speed,,
+164,代码,Modify segment angle,,
+165,代码,LENGTH MULTIPLIED BY,,
+166,代码,MODIFY ALL SEGMENTS:,,
+167,代码,Modify segment glow,,
+168,代码,SPEED MULTIPLIED BY,,
+169,代码,WIDTH MULTIPLIED BY,,
+170,代码,ANGLE MULTIPLIED BY,,
+171,代码,Failed to load file,,
+172,代码,yyyy MM dd HH_mm_ss,,
+173,代码,Windmillize segment,,
+174,代码,Create new segment,,
+175,代码,GLOW MULTIPLIED BY,,
+176,代码,THIS MAKES AN OVAL,,
+177,代码,Spiralize segments,,
+178,代码,Shrinkify segments,,
+179,代码,Subdivide segments,,
+180,代码,Drag segment node,,
+181,代码,Modify all length,,
+182,代码,Canvas/Text (TMP),,
+183,代码,Dupe lotsa copiez,,
+184,代码,Nothing Selected,,
+185,代码,Modify all speed,,
+186,代码,Randomize colors,,
+187,代码,SWITCH TO SOLID,,
+188,代码,Modify all glow,,
+189,代码,Solidify Scooch,,
+190,代码,Load saved file,,
+191,代码,Delete segment,,
+192,代码,Segment(Clone),,
+193,代码,Modify segment,,
+194,代码,LAYERS SORTED!,,
+195,代码,Make Recursive,,
+196,代码,DESIGN LOADED!,,
+197,代码,ENTRIES FOUND,,
+198,代码,Copy segment,,
+199,代码,Move segment,,
+200,代码,ROOT SEGMENT,,
+201,代码,trail width,,
+202,代码,Sort layers,,
+203,代码,SINE WAVE 1,,
+204,代码,SINE WAVE 2,,
+205,代码,Picker type,,
+206,代码,Text (TMP),,
+207,代码,TO LENGTH!,,
+208,代码,SPEED: 0.3,,
+209,代码,MADE BY ME,,
+210,代码,Uploaded:,,
+211,代码,TO SPEED!,,
+212,代码,TO WIDTH!,,
+213,代码,TO ANGLE!,,
+214,代码,SPEED: -1,,
+215,代码,SPEED: -2,,
+216,代码,SINE WAVE,,
+217,代码,SECTION 1,,
+218,代码,SECTION 2,,
+219,代码,TOP RATED,,
+220,代码,Recalled,,
+221,代码,TO GLOW!,,
+222,代码,SPEED: 3,,
+223,代码,SPEED: 1,,
+224,代码,SPIRAL 1,,
+225,代码,SPIRAL 2,,
+226,代码,SECONDS,,
+227,代码,Size:,,
+228,代码,Group,,
+229,代码,ADDED,,
+230,代码,Set,,
+231,场景/预制体,"- The loaded screenshot is the most recent one you've taken using the in-game screenshot button. It gets uploaded along with your design. It does not find screenshots taken with the Steam overlay.
+
+- When you press upload, a copy of your current design will be saved exactly as it is and uploaded to the Steam Workshop.
+
+- If you change your mind, you can easily find your design in the Steam Workshop by searching your own content while there. You can edit or delete your entries that way.
+
+- You cannot currently modify an existing Steam Workshop entry in-game. You just have to delete it and re-upload.
+
+- You have to be connected to Steam for any of this to work.",,TMPro.TextMeshProUGUI
+232,场景/预制体,"""This is a super neato design that I made while saving a bus full of orphans from careening off a cliff into a volcano of scorpions by singing that Africa song by ToTo and I'll tell you, everyone clapped. They were so happy to see me despite the fact I was completely naked, except for the American flag I was wearing as a cape.
+But see the neat thing about it all is that I had an onion strapped to my belt, as that was the style at the time. Two onions for a pickle, you'd say, and you're on your way.""",,TMPro.TextMeshProUGUI
+233,场景/预制体,"Clicking these little arrows will ""scooch"" everything forward or back by the same distance they'll travel each frame while in play mode. This is useful for accessing segments when things get crowded. 
+
+This does not affect the segments' ""home"" positions, which they will return to when you press play. If you want to make the scooch permanent, hold SHIFT while pressing the restore button (the middle one, in between the arrow buttons)",,TMPro.TextMeshProUGUI
+234,场景/预制体,"Welcome.
+Zen Trails is meant to be a relaxing experience that stimulates the mind. Here you can create beautiful and entrancing designs using nothing but circular rotations and a bit of creativity.
+
+If at any point you want to jump to a certain section of the tutorial, click the tutorial button in the bottom left. You can also press 'Escape' to exit.",,TMPro.TextMeshProUGUI
+235,场景/预制体,"Now for the fun stuff! Let's start talking about how to make beautiful designs.
+ 
+It's assumed that you'll be pressing play on each of these tutorial designs. Don't hesitate to mess with them and change them however you like, to learn or just satisfy your curiosity. If it gets messy just click the back or next buttons and everything will reset.",,TMPro.TextMeshProUGUI
+236,场景/预制体,"This will change the colors of the selected segments in an even gradient in the order in which they were selected. If they were selected all at once, it's the order in which they were created. This will override any segment gradients and make them all single color.",,TMPro.TextMeshProUGUI
+237,场景/预制体,"If active, this will pause the entire sequence after a certain time.
+
+For example, if both values are set to 1, imagine there's an invisible segment rotating at a speed of 1. After that segment does exactly 1 rotation, the whole sequence will pause.",,TMPro.TextMeshProUGUI
+238,场景/预制体,"To get smoother lines at higher speed, increase this number. Be warned, it'll make your CPU work harder, so if your framerate drops, you're better off leaving this at 1, and slowing down the Global Speed setting in the panel on the left.",,TMPro.TextMeshProUGUI
+239,场景/预制体,"Try changing the Color and Thickness of a segment. LEFT CLICK on any segment end point to bring up its info panel, then expand it with the MORE tab. Designs can be very beautiful and satisfying with a little color and width variety.",,TMPro.TextMeshProUGUI
+240,场景/预制体,"This will upload your current design to the Steam Workshop, exactly as it is, including camera position. Note that others will play your design with a default global speed of 1. Make sure it works well at that global speed.",,TMPro.TextMeshProUGUI
+241,场景/预制体,"By adding more segments and experimenting with different speeds, lengths, as well as varying aesthetics, you can create some genuinely beautiful designs that are mathematically interesting and soothing to watch.",,TMPro.TextMeshProUGUI
+242,场景/预制体,"Changing the SPEED and LENGTH of a segment will alter its design dramatically, and a lot of really cool designs can be made just by making small changes. Press SPACE to go back to building.",,TMPro.TextMeshProUGUI
+243,场景/预制体,"Make sure your internet connection is good, and you are connected to Steam, and then restart Zen Trails. If it still doesn't work, please leave a post on the Zen Trails forum on Steam.",,TMPro.TextMeshProUGUI
+244,场景/预制体,"LEFT CLICK on the end of your second segment to bring up its info panel. Set the speed to -2.5. Make sure the first segment speed is set to 1, then hit SPACE again.",,TMPro.TextMeshProUGUI
+245,场景/预制体,"Each recursion will be offset by this many degrees. If alternating, every other one. If random, this number is ignored and each is offset by a random amount.",,TMPro.TextMeshProUGUI
+246,场景/预制体,"Now RIGHT CLICK on the end of your segment and drag to create a new segment that is an extension of the first. 
+Then press SPACE again to witness the magic.",,TMPro.TextMeshProUGUI
+247,场景/预制体,"Out of ideas? Click on this light bulb button to bring up the COMMUNITY HUB where you can load designs made by other players, and upload your own to share!",,TMPro.TextMeshProUGUI
+248,场景/预制体,"These buttons let you toggle play mode, open the Save/Load menu, and change the music. The pause button is useful for taking screenshots during play mode.",,TMPro.TextMeshProUGUI
+249,场景/预制体,"This settings panel determines the default values given to new segments. Very useful if you want all new segments to have a specific color or speed, etc.",,TMPro.TextMeshProUGUI
+250,场景/预制体,"Before we start talking about how to make pretty designs, let's get acquainted with the different panels on the screen. Click the button to continue",,TMPro.TextMeshProUGUI
+251,场景/预制体,"The second segment follows the rotation of the first, and adds its own rotation as well, creating an interesting trail.
+Press SPACE again to stop.",,TMPro.TextMeshProUGUI
+252,场景/预制体,"It is recommended to play your design to completion, then pause, then take a screenshot using this button or the one in the top right.",,TMPro.TextMeshProUGUI
+253,场景/预制体,You can delete a segment by LEFT CLICKING on it and hitting DELETE. Note that this will also delete all of its extending segments.,,TMPro.TextMeshProUGUI
+254,场景/预制体,"Zoom in and out with the SCROLL WHEEL. 
+Move the camera with the WASD keys, or click and drag with the MIDDLE MOUSE button.",,TMPro.TextMeshProUGUI
+255,场景/预制体,"This panel is used to change global settings, like making everything faster if you're impatient or slower if you're high.",,TMPro.TextMeshProUGUI
+256,场景/预制体,Layer order determines which trail will be on top if two trails cross over eachother. The highest number will be on top.,,TMPro.TextMeshProUGUI
+257,场景/预制体,"If disabled, you can only exit play mode by pressing SPACE. You can also pause the sequence by pressing P.",,TMPro.TextMeshProUGUI
+258,场景/预制体,"Draw a segment by clicking and dragging with the RIGHT MOUSE button. 
+Then press SPACE to enter play mode.",,TMPro.TextMeshProUGUI
+259,场景/预制体,"- Select segment
+- Drag existing segment
+- Box select
+- (With SHIFT) add to or remove from box selection",,TMPro.TextMeshProUGUI
+260,场景/预制体,"You just made a very lovely circle, and you should be proud.
+Press SPACE again to return to build mode.",,TMPro.TextMeshProUGUI
+261,场景/预制体,View some helpful designs stored locally - no need to be online or connected to Steam!,,TMPro.TextMeshProUGUI
+262,场景/预制体,C:/Users/NinjaSteve/AppData/LocalLow/Universe Juice/Zen Trails/screenshots,,TMPro.TextMeshProUGUI
+263,场景/预制体,This will take a screenshot (without these buttons) and save it to:,,TMPro.TextMeshProUGUI
+264,场景/预制体,SHARE YOUR DESIGNS AND VIEW THOSE MADE BY OTHER USERS,,TMPro.TextMeshProUGUI
+265,场景/预制体,SUCCESS! YOUR DESIGN HAS BEEN UPLOADED TO STEAM! YAY!,,TMPro.TextMeshProUGUI
+266,场景/预制体,LEFT CLICK: Place  -  R: Rotate 90°  -  ESC: Cancel,,TMPro.TextMeshProUGUI
+267,场景/预制体,UPLOAD YOUR CURRENT DESIGN TO THE STEAM WORKSHOP,,TMPro.TextMeshProUGUI
+268,场景/预制体,Please save your design before loading a preset,,TMPro.TextMeshProUGUI
+269,场景/预制体,RIGHT CLICK AND DRAG: CREATE NEW SEGMENT,,TMPro.TextMeshProUGUI
+270,场景/预制体,Show navigation buttons during play mode,,TMPro.TextMeshProUGUI
+271,场景/预制体,Subdivisions copy 'draw trail' setting,,TMPro.TextMeshProUGUI
+272,场景/预制体,Play sound when entering play mode,,TMPro.TextMeshProUGUI
+273,场景/预制体,Say something about your design...,,TMPro.TextMeshProUGUI
+274,场景/预制体,Center camera on selected segment,,TMPro.TextMeshProUGUI
+275,场景/预制体,Light up when entering play mode,,TMPro.TextMeshProUGUI
+276,场景/预制体,Center camera when pressing play,,TMPro.TextMeshProUGUI
+277,场景/预制体,Enter a name or select from list,,TMPro.TextMeshProUGUI
+278,场景/预制体,CANNOT CONNECT TO STEAM WORKSHOP,,TMPro.TextMeshProUGUI
+279,场景/预制体,SET ALL SELECTED TO SAME  VALUE:,,TMPro.TextMeshProUGUI
+280,场景/预制体,You will lose any unsaved data,,TMPro.TextMeshProUGUI
+281,场景/预制体,NEW SEGMENT DEFAULT SETTINGS,,TMPro.TextMeshProUGUI
+282,场景/预制体,RANDOMIZE COLORS FROM PALLET,,TMPro.TextMeshProUGUI
+283,场景/预制体,APPLY COLORS SEQUENTIALLY...,,TMPro.TextMeshProUGUI
+284,场景/预制体,TAKE SCREENSHOT (PLAY MODE),,TMPro.TextMeshProUGUI
+285,场景/预制体,LEFT CLICK: EVERYTHING ELSE,,TMPro.TextMeshProUGUI
+286,场景/预制体,ROTATE SEGMENT WHILE MOVING,,TMPro.TextMeshProUGUI
+287,场景/预制体,HIDE SEGMENTS WHILE PLAYING,,TMPro.TextMeshProUGUI
+288,场景/预制体,Show logo during play mode,,TMPro.TextMeshProUGUI
+289,场景/预制体,Give your design a name...,,TMPro.TextMeshProUGUI
+290,场景/预制体,<SCREENSHOT SAVE LOCATION>,,TMPro.TextMeshProUGUI
+291,场景/预制体,"""EEEEEEEEEEEEEEEEEEEEEE""?",,TMPro.TextMeshProUGUI
+292,场景/预制体,RANDOM COLOR FROM PALETTE,,TMPro.TextMeshProUGUI
+293,场景/预制体,MODIFY SELECTED SEGMENTS:,,TMPro.TextMeshProUGUI
+294,场景/预制体,APPLY COLORS SEQUENTIALLY,,TMPro.TextMeshProUGUI
+295,场景/预制体,TOGGLE PAUSE (PLAY MODE),,TMPro.TextMeshProUGUI
+296,场景/预制体,"Clear all?
+Are you sure?",,TMPro.TextMeshProUGUI
+297,场景/预制体,SET ALL TO DEFAULT COLOR,,TMPro.TextMeshProUGUI
+298,场景/预制体,DUPLICATE PREVIOUS COPY,,TMPro.TextMeshProUGUI
+299,场景/预制体,DELETE SELECTED SEGMENT,,TMPro.TextMeshProUGUI
+300,场景/预制体,Replace existing save?,,TMPro.TextMeshProUGUI
+301,场景/预制体,"CHECK ME OUT!
+I'M NEW!",,TMPro.TextMeshProUGUI
+302,场景/预制体,TRAIL WIDTH MULTIPLIER,,TMPro.TextMeshProUGUI
+303,场景/预制体,COPY SELECTED SEGMENT,,TMPro.TextMeshProUGUI
+304,场景/预制体,MOVE SELECTED SEGMENT,,TMPro.TextMeshProUGUI
+305,场景/预制体,Trail curve smoothing,,TMPro.TextMeshProUGUI
+306,场景/预制体,SELECT PALETTE PRESET,,TMPro.TextMeshProUGUI
+307,场景/预制体,DISTANCE FROM CENTER,,TMPro.TextMeshProUGUI
+308,场景/预制体,Uploaded: 12-12-2021,,TMPro.TextMeshProUGUI
+309,场景/预制体,COMPLEX COMBINATIONS,,TMPro.TextMeshProUGUI
+310,场景/预制体,"CONTROL + (1,2,3,4)",,TMPro.TextMeshProUGUI
+311,场景/预制体,OPEN SAVE/LOAD MENU,,TMPro.TextMeshProUGUI
+312,场景/预制体,SHIFT + CONTROL + Z,,TMPro.TextMeshProUGUI
+313,场景/预制体,SAVED SUCCESSFULLY!,,TMPro.TextMeshProUGUI
+314,场景/预制体,MOVE CAMERA (DRAG),,TMPro.TextMeshProUGUI
+315,场景/预制体,ALTERNATE ZOOM OUT,,TMPro.TextMeshProUGUI
+316,场景/预制体,SWITCH TO GRADIENT,,TMPro.TextMeshProUGUI
+317,场景/预制体,ALTERNATE ZOOM IN,,TMPro.TextMeshProUGUI
+318,场景/预制体,"SHIFT + (1,2,3,4)",,TMPro.TextMeshProUGUI
+319,场景/预制体,OPEN MODIFY PANEL,,TMPro.TextMeshProUGUI
+320,场景/预制体,MAKE RECURSIVE...,,TMPro.TextMeshProUGUI
+321,场景/预制体,IN ORDER SELECTED,,TMPro.TextMeshProUGUI
+322,场景/预制体,(Press a key...),,TMPro.TextMeshProUGUI
+323,场景/预制体,RESTORE DEFAULTS,,TMPro.TextMeshProUGUI
+324,场景/预制体,APPLY IN REVERSE,,TMPro.TextMeshProUGUI
+325,场景/预制体,RANDOMIZE COLORS,,TMPro.TextMeshProUGUI
+326,场景/预制体,By Design Author,,TMPro.TextMeshProUGUI
+327,场景/预制体,SEGMENT DEFAULTS,,TMPro.TextMeshProUGUI
+328,场景/预制体,SHRINKING SHAPES,,TMPro.TextMeshProUGUI
+329,场景/预制体,OTHER TECHNIQUES,,TMPro.TextMeshProUGUI
+330,场景/预制体,Enable vignette,,TMPro.TextMeshProUGUI
+331,场景/预制体,TAKE SCREENSHOT,,TMPro.TextMeshProUGUI
+332,场景/预制体,# OF RECURSIONS,,TMPro.TextMeshProUGUI
+333,场景/预制体,SIZE MULTIPLIER,,TMPro.TextMeshProUGUI
+334,场景/预制体,DESIGN UPLOADER,,TMPro.TextMeshProUGUI
+335,场景/预制体,"SPIRAL 
+SPEED:",,TMPro.TextMeshProUGUI
+336,场景/预制体,AT A SPEED OF:,,TMPro.TextMeshProUGUI
+337,场景/预制体,SPEED DOUBLED!,,TMPro.TextMeshProUGUI
+338,场景/预制体,Exit tutorial?,,TMPro.TextMeshProUGUI
+339,场景/预制体,USEFUL BUTTONS,,TMPro.TextMeshProUGUI
+340,场景/预制体,CENTER CAMERA,,TMPro.TextMeshProUGUI
+341,场景/预制体,RECALL GROUP:,,TMPro.TextMeshProUGUI
+342,场景/预制体,SELECT PRESET,,TMPro.TextMeshProUGUI
+343,场景/预制体,SCOOCH ACTIVE,,TMPro.TextMeshProUGUI
+344,场景/预制体,Enter text...,,TMPro.TextMeshProUGUI
+345,场景/预制体,COMMUNITY HUB,,TMPro.TextMeshProUGUI
+346,场景/预制体,"SHRINK
+SPEED:",,TMPro.TextMeshProUGUI
+347,场景/预制体,VIEW CONTROLS,,TMPro.TextMeshProUGUI
+348,场景/预制体,LOCAL PRESETS,,TMPro.TextMeshProUGUI
+349,场景/预制体,"Size: 1,000KB",,TMPro.TextMeshProUGUI
+350,场景/预制体,DESIGN TITLE:,,TMPro.TextMeshProUGUI
+351,场景/预制体,Good to know.,,TMPro.TextMeshProUGUI
+352,场景/预制体,Exit Tutorial,,TMPro.TextMeshProUGUI
+353,场景/预制体,SIMPLE SHAPES,,TMPro.TextMeshProUGUI
+354,场景/预制体,W-A-S-D KEYS,,TMPro.TextMeshProUGUI
+355,场景/预制体,KEY BINDINGS,,TMPro.TextMeshProUGUI
+356,场景/预制体,SCROLL WHEEL,,TMPro.TextMeshProUGUI
+357,场景/预制体,GLOBAL SPEED,,TMPro.TextMeshProUGUI
+358,场景/预制体,"TRAIL 
+WIDTH",,TMPro.TextMeshProUGUI
+359,场景/预制体,SORT LAYERS:,,TMPro.TextMeshProUGUI
+360,场景/预制体,UPLOADING...,,TMPro.TextMeshProUGUI
+361,场景/预制体,"PAUSE 
+AFTER",,TMPro.TextMeshProUGUI
+362,场景/预制体,ALPHABETICAL,,TMPro.TextMeshProUGUI
+363,场景/预制体,DESIGN TITLE,,TMPro.TextMeshProUGUI
+364,场景/预制体,DESCRIPTION:,,TMPro.TextMeshProUGUI
+365,场景/预制体,CONTROL + Z,,TMPro.TextMeshProUGUI
+366,场景/预制体,PAN CAMERA:,,TMPro.TextMeshProUGUI
+367,场景/预制体,PLAY / STOP,,TMPro.TextMeshProUGUI
+368,场景/预制体,INSPIRATION,,TMPro.TextMeshProUGUI
+369,场景/预制体,WAVELENGTHS,,TMPro.TextMeshProUGUI
+370,场景/预制体,TRAIL COLOR,,TMPro.TextMeshProUGUI
+371,场景/预制体,TRAIL WIDTH,,TMPro.TextMeshProUGUI
+372,场景/预制体,<FILE NAME>,,TMPro.TextMeshProUGUI
+373,场景/预制体,FADE TRAILS,,TMPro.TextMeshProUGUI
+374,场景/预制体,LAYER ORDER,,TMPro.TextMeshProUGUI
+375,场景/预制体,OUTER COLOR,,TMPro.TextMeshProUGUI
+376,场景/预制体,SAVE / LOAD,,TMPro.TextMeshProUGUI
+377,场景/预制体,WINDMILLIZE,,TMPro.TextMeshProUGUI
+378,场景/预制体,ALTERNATING,,TMPro.TextMeshProUGUI
+379,场景/预制体,MOST RECENT,,TMPro.TextMeshProUGUI
+380,场景/预制体,INNER COLOR,,TMPro.TextMeshProUGUI
+381,场景/预制体,CLOSE PANEL,,TMPro.TextMeshProUGUI
+382,场景/预制体,PAUSE AFTER,,TMPro.TextMeshProUGUI
+383,场景/预制体,CHANGE HUE:,,TMPro.TextMeshProUGUI
+384,场景/预制体,ZEN TrAilS,,TMPro.TextMeshPro
+385,场景/预制体,Fullscreen,,TMPro.TextMeshProUGUI
+386,场景/预制体,SET GROUP:,,TMPro.TextMeshProUGUI
+387,场景/预制体,MySaveFile,,TMPro.TextMeshProUGUI
+388,场景/预制体,MY DESIGNS,,TMPro.TextMeshProUGUI
+389,场景/预制体,DRAW TRAIL,,TMPro.TextMeshProUGUI
+390,场景/预制体,FOOTPRINTS,,TMPro.TextMeshProUGUI
+391,场景/预制体,BACKGROUND,,TMPro.TextMeshProUGUI
+392,场景/预制体,CONTINUOUS,,TMPro.TextMeshProUGUI
+393,场景/预制体,DESCENDING,,TMPro.TextMeshProUGUI
+394,场景/预制体,AUTO PAUSE,,TMPro.TextMeshProUGUI
+395,场景/预制体,SINE WAVES,,TMPro.TextMeshProUGUI
+396,场景/预制体,CLEAR ALL,,TMPro.TextMeshProUGUI
+397,场景/预制体,MAIN MENU,,TMPro.TextMeshProUGUI
+398,场景/预制体,SUBDIVIDE,,TMPro.TextMeshProUGUI
+399,场景/预制体,BEST GLOW,,TMPro.TextMeshProUGUI
+400,场景/预制体,ASCENDING,,TMPro.TextMeshProUGUI
+401,场景/预制体,THICKNESS,,TMPro.TextMeshProUGUI
+402,场景/预制体,SHRINKIFY,,TMPro.TextMeshProUGUI
+403,场景/预制体,SPIRALIZE,,TMPro.TextMeshProUGUI
+404,场景/预制体,WINDMILLS,,TMPro.TextMeshProUGUI
+405,场景/预制体,TUTORIAL,,TMPro.TextMeshProUGUI
+406,场景/预制体,Option A,,TMPro.TextMeshProUGUI
+407,场景/预制体,GRAPHICS,,TMPro.TextMeshProUGUI
+408,场景/预制体,MANDALAS,,TMPro.TextMeshProUGUI
+409,场景/预制体,CHEERFUL,,TMPro.TextMeshProUGUI
+410,场景/预制体,ROTATION,,TMPro.TextMeshProUGUI
+411,场景/预制体,SORT BY:,,TMPro.TextMeshProUGUI
+412,场景/预制体,UPVOTED!,,TMPro.TextMeshProUGUI
+413,场景/预制体,Continue,,TMPro.TextMeshProUGUI
+414,场景/预制体,Go on...,,TMPro.TextMeshProUGUI
+415,场景/预制体,OPTIONS,,TMPro.TextMeshProUGUI
+416,场景/预制体,FLOWERS,,TMPro.TextMeshProUGUI
+417,场景/预制体,Nooo...,,TMPro.TextMeshProUGUI
+418,场景/预制体,SCOOCH:,,TMPro.TextMeshProUGUI
+419,场景/预制体,Got it.,,TMPro.TextMeshProUGUI
+420,场景/预制体,SPIRALS,,TMPro.TextMeshProUGUI
+421,场景/预制体,Sounds,,TMPro.TextMeshProUGUI
+422,场景/预制体,Master,,TMPro.TextMeshProUGUI
+423,场景/预制体,ESCAPE,,TMPro.TextMeshProUGUI
+424,场景/预制体,WARMTH,,TMPro.TextMeshProUGUI
+425,场景/预制体,CELTIC,,TMPro.TextMeshProUGUI
+426,场景/预制体,MUSIC:,,TMPro.TextMeshProUGUI
+427,场景/预制体,Delete,,TMPro.TextMeshProUGUI
+428,场景/预制体,PASTEL,,TMPro.TextMeshProUGUI
+429,场景/预制体,RANDOM,,TMPro.TextMeshProUGUI
+430,场景/预制体,CUSTOM,,TMPro.TextMeshProUGUI
+431,场景/预制体,AUTUMN,,TMPro.TextMeshProUGUI
+432,场景/预制体,LENGTH,,TMPro.TextMeshProUGUI
+433,场景/预制体,RADIAL,,TMPro.TextMeshProUGUI
+434,场景/预制体,SIMPLE,,TMPro.TextMeshProUGUI
+435,场景/预制体,RADIUS,,TMPro.TextMeshProUGUI
+436,场景/预制体,ACTIVE,,TMPro.TextMeshProUGUI
+437,场景/预制体,RESUME,,TMPro.TextMeshProUGUI
+438,场景/预制体,MODIFY,,TMPro.TextMeshProUGUI
+439,场景/预制体,OFFSET,,TMPro.TextMeshProUGUI
+440,场景/预制体,DREAMS,,TMPro.TextMeshProUGUI
+441,场景/预制体,UPLOAD,,TMPro.TextMeshProUGUI
+442,场景/预制体,Cancel,,TMPro.TextMeshProUGUI
+443,场景/预制体,CANCEL,,TMPro.TextMeshProUGUI
+444,场景/预制体,BASICS,,TMPro.TextMeshProUGUI
+445,场景/预制体,Resume,,TMPro.TextMeshProUGUI
+446,场景/预制体,SPIRAL,,TMPro.TextMeshProUGUI
+447,场景/预制体,Author,,TMPro.TextMeshProUGUI
+448,场景/预制体,BEGIN,,TMPro.TextMeshProUGUI
+449,场景/预制体,Music,,TMPro.TextMeshProUGUI
+450,场景/预制体,UNDO:,,TMPro.TextMeshProUGUI
+451,场景/预制体,AUDIO,,TMPro.TextMeshProUGUI
+452,场景/预制体,SPACE,,TMPro.TextMeshProUGUI
+453,场景/预制体,MENU:,,TMPro.TextMeshProUGUI
+454,场景/预制体,REDO:,,TMPro.TextMeshProUGUI
+455,场景/预制体,ZOOM:,,TMPro.TextMeshProUGUI
+456,场景/预制体,INDIA,,TMPro.TextMeshProUGUI
+457,场景/预制体,WATER,,TMPro.TextMeshProUGUI
+458,场景/预制体,SPEED,,TMPro.TextMeshProUGUI
+459,场景/预制体,CLEAR,,TMPro.TextMeshProUGUI
+460,场景/预制体,MUTED,,TMPro.TextMeshProUGUI
+461,场景/预制体,PASTE,,TMPro.TextMeshProUGUI
+462,场景/预制体,PAGE:,,TMPro.TextMeshProUGUI
+463,场景/预制体,APPLY,,TMPro.TextMeshProUGUI
+464,场景/预制体,ANGLE,,TMPro.TextMeshProUGUI
+465,场景/预制体,Nice.,,TMPro.TextMeshProUGUI
+466,场景/预制体,Cool.,,TMPro.TextMeshProUGUI
+467,场景/预制体,Begin,,TMPro.TextMeshProUGUI
+468,场景/预制体,TITLE,,TMPro.TextMeshProUGUI
+469,场景/预制体,QUIT,,TMPro.TextMeshProUGUI
+470,场景/预制体,LOAD,,TMPro.TextMeshProUGUI
+471,场景/预制体,SAVE,,TMPro.TextMeshProUGUI
+472,场景/预制体,GRAY,,TMPro.TextMeshProUGUI
+473,场景/预制体,GLOW,,TMPro.TextMeshProUGUI
+474,场景/预制体,COLD,,TMPro.TextMeshProUGUI
+475,场景/预制体,COPY,,TMPro.TextMeshProUGUI
+476,场景/预制体,MORE,,TMPro.TextMeshProUGUI
+477,场景/预制体,Okay,,TMPro.TextMeshProUGUI
+478,场景/预制体,BACK,,TMPro.TextMeshProUGUI
+479,场景/预制体,NEXT,,TMPro.TextMeshProUGUI
+480,场景/预制体,YEP,,TMPro.TextMeshProUGUI
+481,场景/预制体,>,,TMPro.TextMeshProUGUI
+482,场景/预制体,<,,TMPro.TextMeshProUGUI

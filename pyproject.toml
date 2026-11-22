@@ -1,0 +1,19 @@
+[project]
+name = "zen-trails-cn"
+version = "0.1.0"
+description = "Zen Trails 简体中文汉化：词典生成与界面验证工具"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "pillow>=10.0",          # 截图抓取、逐像素量标签位置
+]
+
+[dependency-groups]
+# 只有做资源逆向（导出 UI 树、字体图集）时才用到，uv sync 默认会装 dev 组
+dev = [
+    "unitypy>=1.25",
+]
+
+[tool.uv]
+# 纯脚本仓库，不需要把自身打包成 wheel
+package = false
