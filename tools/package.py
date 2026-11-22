@@ -36,7 +36,7 @@ RUNTIME_FILES = [
 # AutoTranslator 的空占位文件（可有可无，有就带上）
 PLACEHOLDERS = ["_Preprocessors.txt", "_Postprocessors.txt", "_Substitutions.txt"]
 
-ZIP_NAME = "ZenTrails-中文汉化-v1.zip"
+ZIP_NAME = "ZenTrails-中文汉化-v1.1.zip"
 
 # 控制台/管道按 UTF-8 输出，避免中文在 GBK 终端里变乱码
 try:
