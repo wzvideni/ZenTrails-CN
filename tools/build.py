@@ -7,6 +7,8 @@ import csv, os, re, json
 BASE = paths.ROOT
 DATA = paths.TRANSLATION
 OUT_DIR = paths.TEXT_DIR
+if "--out" in _sys.argv:                          # 打包脚本用它指到临时目录
+    OUT_DIR = _sys.argv[_sys.argv.index("--out") + 1]
 
 rows = list(csv.reader(open(os.path.join(DATA, "ZenTrails_文本清单.csv"), encoding="utf-8-sig")))[1:]
 src = {int(r[0]): r[2] for r in rows}

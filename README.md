@@ -41,6 +41,7 @@ ZenTrails-CN/
 │   └─ font_chars.json        字体 bundle 实际含有的字形，用来校验译文不会出现方块
 ├─ tools/
 │   ├─ paths.py               统一路径约定（仓库内相对定位，游戏目录可覆盖）
+│   ├─ package.py             组装 dist/ 并打成发布 zip
 │   ├─ build.py               生成 zhuanti.txt + zz_regex.txt（写入游戏目录）
 │   ├─ adddict.py             生成 zh_extra.txt（写入游戏目录）
 │   ├─ ctl.py                 窗口截图 / 模拟点击与按键，配合调试插件做 UI 验证
@@ -141,6 +142,18 @@ $env:ZEN_TRAILS_HOME = "D:\Games\Zen Trails"     # 一次设置，之后所有�
 ```
 
 `plugin\build.ps1` 也支持 `-Game "D:\Games\Zen Trails"` 显式指定。
+
+### 打发布包
+
+```powershell
+uv run python tools\package.py                   # 重新组装 dist\zen-trails-zh\ 并打包
+uv run python tools\package.py --verify          # 只跟现有 zip 比对内容，不覆盖
+uv run python tools\package.py --rebuild-plugin  # 先重新编译插件再打
+```
+
+组装规则：运行时文件（`BepInEx/core`、`BepInEx/plugins` 里的 XUnity 两个插件、`winhttp.dll`、`doorstop_config.ini`、字体 bundle `arialuni_sdf_u2019`、以及 AutoTranslator 的配置和三个占位 txt）从游戏目录取；三个词典由本仓库的 `translation/` **现生成**（不是复制游戏里的旧文件）；插件来自 `out\ZenTrailsCN.dll`；说明文档来自 `docs\安装说明.txt`。
+
+产物是 `dist\ZenTrails-中文汉化-v1.zip`，约 28.6 MB / 64 个条目（`dist/` 不入库）。`--verify` 会按 CRC 逐条目比对，正常结果是「条目数相同、只有 `BepInEx/plugins/ZenTrailsCN.dll` 不同」——因为重新编译的 DLL 内嵌 MVID/时间戳不一样，代码本身没变。
 
 改译文的流程：`translation/zh_0*.txt` 里按 `<编号> TAB <中文>` 改，编号对应 `ZenTrails_文本清单.csv` 第一列；零散词条在 `extra_zh.txt` 里按 `<英文> TAB <中文>` 加。`build.py` 会打印缺字形、缺译文、带多余 `=` 的行。
 

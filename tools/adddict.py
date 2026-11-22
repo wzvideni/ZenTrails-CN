@@ -7,6 +7,8 @@ import json, os, re, sys
 BASE = paths.ROOT
 DATA = paths.TRANSLATION
 OUT_DIR = paths.TEXT_DIR
+if "--out" in _sys.argv:                          # 打包脚本用它指到临时目录
+    OUT_DIR = _sys.argv[_sys.argv.index("--out") + 1]
 OUT = os.path.join(OUT_DIR, "zh_extra.txt")
 
 NORM = {
